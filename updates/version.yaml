@@ -1,0 +1,5 @@
+1.0.1: First version of SEO
+1.0.2: Add ENV to prevent redirects
+1.0.3: Fix error in Static pages
+1.0.4: Add seo pages static component
+1.0.5: Combine Seo & StaticSeo component into one for Pages & StaticPages
