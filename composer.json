@@ -1,0 +1,27 @@
+{
+    "name": "ozc/seo-plugin",
+    "type": "october-plugin",
+    "description": "ozc SEO plugin",
+    "keywords": ["october", "cms", "ozc seo", "plugin"],
+    "authors": [
+        {
+            "name": "Ozonecoders | Pierre Otto",
+            "email": "pierre_otto@ozonecoders.de",
+            "role": "CEO"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "composer/installers": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ozc\\Contact\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
