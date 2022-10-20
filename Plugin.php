@@ -24,8 +24,7 @@ class Plugin extends PluginBase{
 	// COMPONENTS
 	public function registerComponents(){
 		return [
-		    'Ozc\SEO\Components\SeoPage' => 'SeoPage',
-		    'Ozc\SEO\Components\SeoPageStatic' => 'SeoPageStatic'
+		    'Ozc\SEO\Components\SeoPage' => 'SeoPage'
         ];
 	}
 
