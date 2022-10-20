@@ -1,9 +1,9 @@
 {% if __SELF__.settings.responsive %}
-{% if __SELF__.settings.size == 'custom' %}
-<meta name="viewport" content="width={{__SELF__.settings.width}}, height={{__SELF__.settings.height}}, initial-scale={{__SELF__.settings.rev_scale}}">
-{% else %}
-<meta name="viewport" content="{{__SELF__.settings.size}}, initial-scale={{__SELF__.settings.rev_scale}}">
-{% endif %}
+    {% if __SELF__.settings.size == 'custom' %}
+        <meta name="viewport" content="width={{__SELF__.settings.width}}, height={{__SELF__.settings.height}}, initial-scale={{__SELF__.settings.rev_scale}}">
+    {% else %}
+        <meta name="viewport" content="{{__SELF__.settings.size}}, initial-scale={{__SELF__.settings.rev_scale}}">
+    {% endif %}
 {% endif %}
 
 {% placeholder meta default %}
