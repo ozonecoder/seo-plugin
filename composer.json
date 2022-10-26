@@ -1,7 +1,7 @@
 {
     "name": "ozc/seo-plugin",
     "type": "october-plugin",
-    "description": "ozc SEO plugin",
+    "description": "ozc Seo plugin",
     "keywords": ["october", "cms", "ozc seo", "plugin"],
     "authors": [
         {
@@ -11,12 +11,12 @@
         }
     ],
     "require": {
-        "php": ">=5.4",
+        "php": ">=7.3",
         "composer/installers": "~1.0"
     },
     "autoload": {
         "psr-4": {
-            "Ozc\\Contact\\": ""
+            "Ozc\\Seo\\": ""
         }
     },
     "extra": {
