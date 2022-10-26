@@ -28,6 +28,11 @@ class Helper {
 		return $new_title;
 	}
 
+    //TODO implement a real generate description code
+    public function generateDescription($title){
+        return $this->generateTitle($title);
+    }
+
 	function generateCanonicalUrl(){
 		$settings = $this->settings;
 
@@ -71,4 +76,4 @@ class Helper {
 	}
 
 
-} 
+}

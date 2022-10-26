@@ -1,4 +1,5 @@
-{% set seoTitle = (this.page.ozc_seo_title) ? this.page.ozc_seo_title : __SELF__.seo_title | generateTitle %}
+{% set seoTitle = (this.page.ozc_seo_title) ? this.page.ozc_seo_title : __SELF__.seo_title | generateTitle(this.page.title) %}
+{% set seoMetaDescription = (this.page.ozc_meta_description) ? this.page.ozc_meta_description : __SELF__.seo_description | generateDescription(this.page.title) %}
 
 {% if __SELF__.settings.responsive %}
     {% if __SELF__.settings.size == 'custom' %}
@@ -17,7 +18,7 @@
     {% else %}
         <title>{{this.page.title}}</title>
     {% endif %}
-    {% if __SELF__.seo_description %}<meta name="description" content="{{__SELF__.seo_description}}">{% endif %}
+    {% if seoMetaDescription %}<meta name="description" content="{{seoMetaDescription}}">{% endif %}
     {% if __SELF__.seo_keywords %}<meta name="keywords" content="{{__SELF__.seo_keywords}}">{% endif %}
     {% if __SELF__.canonical_url %}<link rel="canonical" href="{{__SELF__.canonical_url}}" />{% else %}{{ '' | generateCanonicalUrl}}{% endif %}
     <meta name="robots" content="{{__SELF__.robot_index}},{{__SELF__.robot_follow}}">
@@ -34,7 +35,7 @@
 
 {% if __SELF__.settings.favicon %}
     <link rel="icon" type="image/png" href="{{__SELF__.settings.favicon.getThumb(32,32,'crop')|app}}" />
-    <link rel="shortcut icon" type="image/x-icon"href="{{__SELF__.settings.favicon.getThumb(32,32,'crop')|app}}"/>
+    <link rel="shortcut icon" type="image/x-icon" href="{{__SELF__.settings.favicon.getThumb(32,32,'crop')|app}}"/>
 {% endif %}
 
 {% if __SELF__.settings.appicon %}

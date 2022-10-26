@@ -160,6 +160,7 @@ class Plugin extends PluginBase{
 		return [
 			'filters' => [
 				'generateTitle' => [$this, 'generateTitle'],
+				'generateDescription' => [$this, 'generateDescription'],
 				'generateCanonicalUrl' => [$this, 'generateCanonicalUrl'],
 				'otherMetaTags' => [$this ,'otherMetaTags'],
 				'generateOgTags' => [$this,'generateOgTags']
@@ -186,6 +187,12 @@ class Plugin extends PluginBase{
 		$title = $helper->generateTitle($title);
 		return $title;
 	}
+
+    public function generateDescription($title){
+        $helper = new Helper();
+        $title = $helper->generateDescription($title);
+        return $title;
+    }
 
 	public function generateCanonicalUrl($url){
 		$helper = new Helper();
